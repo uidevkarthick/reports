@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Fleet | Customer</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- bootstrap 4 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!-- bootstarap select libraries, please remove if yu dont want -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+        <!-- config files less / js-->
+        <link rel="stylesheet/less" type="text/css" href="less/main.less" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+        <script src="js/chartist-plugin-fill-donut.js"></script>
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+            rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="container-fluid no-pd">
+            <div class="navpabel-responsive">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
+                    </div>
+                    <div class="col-6">
+                        <span class="mobile-togle-nav"></span>
+                        <div class="nav-section mob-nav-section">
+                            <span class="nav-tog-close"></span>
+                            <nav class="navbar navbar-expand-lg">
+                                <div class="collapse show" id="navbarNav">
+                                    <ul class="navbar-nav flex-column">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.html">
+                                                <img src="images/icons/dash-icon.svg" alt="" />
+                                                <img src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" />
+                                                <span class="nav-txt">Dashboard</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navpanel">
+                <div class="logo">
+                    <img src="images/logo.svg" class="img-fluid logo-act" alt="fleet" />
+                    <img src="images/logo-tog.svg" class="img-fluid logo-tog" alt="fleet" />
+                </div>
+                <div class="nav-section">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">
+                                        <img src="images/icons/dash-icon.svg" alt="" /><img
+                                            src="images/icons/dash-icon-blue.svg" class="secn-img" alt="" /><span
+                                            class="nav-txt">Dashboard</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <span class="poweredby">
+                    <img src="images/yap.svg" alt="yap" class="img-fluid" />
+                    <span class="nav-txt">Powered by YAP</span>
+                </span>
+            </div>
+            <div class="contenet-sec mob-agent-sec swtch-section">
+                <!-- for profile -->
+                <div class="profile-sec">
+                    <!-- <div class="toggle-nav"></div> -->
+                    <!-- main sort for agent and list -->
+                    <section class="srch-pick">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="toggle-switch">
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>Debit</span>
+                                            <input type="checkbox" class="custom-control-input" id="debit-swch" checked>
+                                            <label class="custom-control-label" for="debit-swch"></label>
+                                        </div>
+                                    </div>
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>Credit</span>
+                                            <input type="checkbox" class="custom-control-input" id="credit-swch">
+                                            <label class="custom-control-label" for="credit-swch"></label>
+                                        </div>
+                                    </div>
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>Forex</span>
+                                            <input type="checkbox" class="custom-control-input" id="forex-swch">
+                                            <label class="custom-control-label" for="forex-swch"></label>
+                                        </div>
+                                    </div>
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>Gift</span>
+                                            <input type="checkbox" class="custom-control-input" id="gift-swch">
+                                            <label class="custom-control-label" for="gift-swch"></label>
+                                        </div>
+                                    </div>
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>GPR</span>
+                                            <input type="checkbox" class="custom-control-input" id="gpr-swch">
+                                            <label class="custom-control-label" for="gpr-swch"></label>
+                                        </div>
+                                    </div>
+                                    <div class="stch">
+                                        <div class="custom-control custom-switch">
+                                            <span>Fleet</span>
+                                            <input type="checkbox" class="custom-control-input" id="fleet-swch">
+                                            <label class="custom-control-label" for="fleet-swch"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="profile-dept">
+                        <span class="profile-img">
+                            <img src="images/user.png" class="img-fluid" alt="user" />
+                        </span>
+                        <p class="profile-username">Admin YAP</p>
+                        <div class="profile-dlt-sec">
+                            <div class="profile-drop">
+                                <span class="profile-img">
+                                    <img src="images/user.jpg" class="img-fluid" alt="user" />
+                                </span>
+                                <div class="user-dlts">
+                                    <p class="profile-username">karthick, baasha</p>
+                                    <p>9876543210</p>
+                                    <p>candysweet99@gmail.com</p>
+                                </div>
+                                <ul class="my-acc-profile">
+                                    <li><a href="profile.html">My Account</a></li>
+                                    <li><a href="login.html">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenet-sec dash-overview dash-drop-sec">
+                <div class="content-overview">
+                    <section class="srch-pick w-full">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="corp-select">
+                                    <div class="agent-drop">
+                                        <label>Business</label>
+                                        <select class="selectpicker">
+                                            <option>ybbf</option>
+                                            <option>ybbf</option>
+                                            <option>ybbf</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="corp-select">
+                                    <div class="agent-drop">
+                                        <label>Corporate</label>
+                                        <select class="selectpicker">
+                                            <option>DATA</option>
+                                            <option>DATA</option>
+                                            <option>DATA</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="corp-select">
+                                    <div class="agent-drop">
+                                        <label>BIN 1</label>
+                                        <select class="selectpicker">
+                                            <option>234567 / Product Code - 45</option>
+                                            <option>234567 / Product Code - 45</option>
+                                            <option>234567 / Product Code - 45</option>
+                                            <option>234567 / Product Code - 45</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="contenet-sec dash-overview">
+                <div class="content-overview">
+                    <h1>Overview Data</h1>
+                    <div class="row float-left">
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/avail-balance.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Available Balance</span>
+                                    <span class="ove-txt-cont">₹ 3456.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/icome.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Income / Revenue</span>
+                                    <span class="ove-txt-cont">₹ 3456.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/income-share.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Income sharing</span>
+                                    <span class="ove-txt-cont">₹ 3456.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/expenses.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Expenses</span>
+                                    <span class="ove-txt-cont">₹ 3456.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/total-load.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Total Load Value</span>
+                                    <span class="ove-txt-cont">₹ 456779.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/total-load-cnt.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Total Load Count</span>
+                                    <span class="ove-txt-cont">12045</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/total-used-val.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Total Used Value</span>
+                                    <span class="ove-txt-cont">₹ 3456.34</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-4 mb-30">
+                            <div class="ove-info">
+                                <span class="ove-img"><img src="images/dashboard/tot-cnt.svg" alt=""
+                                        class="img-fluid" /></span>
+                                <div class="ove-txt">
+                                    <span class="ove-txt-tlt">Total Used Count</span>
+                                    <span class="ove-txt-cont">3456</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenet-sec dash-ove">
+                <div class="content-overview">
+                    <div class="tlt-section-graph">
+                        <h1>Admin YAP - Customer Data | <span class="hsmall">BIN 1 - 234567 / Product Code - 45</span>
+                        </h1>
+                        <div class="icn-sec">
+                            <span><img src="images/upload.svg" alt="" /> </span>
+                            <span><img src="images/mail.svg" alt="" /> </span>
+                        </div>
+                    </div>
+                    <div class="grph-filter">
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>All Network</option>
+                                <option>All Network</option>
+                            </select>
+                        </div>
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>Week to Date</option>
+                                <option>Week to Date</option>
+                            </select>
+                        </div>
+                        <div class="grph-filtbtns">
+                            <span class="flts act">Customer</span>
+                            <span class="flts">KYC</span>
+                        </div>
+                    </div>
+                    <div class="dounut-chrt-sec">
+                        <div class="row">
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth total-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Reg Customers</span>
+                                        <span>1200</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth active-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Active Customers</span>
+                                        <span>800</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth inactive-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Inactive Customers</span>
+                                        <span>400</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth kyc-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>KYC Customers</span>
+                                        <span>750</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth region-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Customers by region</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-charts"></div>
+                    <div class="data-dlt-range">
+                        <div class="data-tlt">
+                            <h1>Week Range Customer Data</h1>
+                            <p>Previous Week (sep 01 - sep 07)</p>
+                        </div>
+                        <div class="data-dlt-sec">
+                            <div class="data-dlt-cont">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="data-dlt-cont">
+                                <div class="data-dlt-lst">
+                                    <ul>
+                                        <li class="lst-reg"><span>Reg. Customers</span><span>300</span></li>
+                                        <li class="lst-active"><span>Active Customers</span><span>89</span></li>
+                                        <li class="lst-inactive"><span>Inactive Customers</span><span>89</span></li>
+                                        <li class="lst-kyc"><span>KYC Customers</span><span>89</span></li>
+                                        <li class="lst-region"><span>Customers by
+                                                Region<br />(Chennai)</span><span>89</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenet-sec dash-overview">
+                <div class="content-overview">
+                    <div class="tlt-section-graph">
+                        <h1>Transcorp - Cards report | <span class="hsmall">BIN 1 - 234567 / Product Code - 45</span>
+                        </h1>
+                        <div class="icn-sec">
+                            <span><img src="images/upload.svg" alt="" /> </span>
+                            <span><img src="images/mail.svg" alt="" /> </span>
+                        </div>
+                    </div>
+                    <div class="grph-filter">
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>All Network</option>
+                                <option>All Network</option>
+                            </select>
+                        </div>
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>Week to Date</option>
+                                <option>Week to Date</option>
+                            </select>
+                        </div>
+                        <div class="grph-filtbtns">
+                            <span class="flts act">Overall</span>
+                            <span class="flts">Physical</span>
+                            <span class="flts">Virtual</span>
+                        </div>
+                    </div>
+                    <div class="dounut-chrt-sec">
+                        <div class="row">
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth total-cards"></div>
+                                    <div class="chart-dlt">
+                                        <span>Total cards</span>
+                                        <span>1200</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth alloc-cards"></div>
+                                    <div class="chart-dlt">
+                                        <span>Allocated Cards</span>
+                                        <span>800</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth unalloc-cards"></div>
+                                    <div class="chart-dlt">
+                                        <span>Unallocated Cards</span>
+                                        <span>400</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth active-cards"></div>
+                                    <div class="chart-dlt">
+                                        <span>Active Cards</span>
+                                        <span>750</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth inactive-cards"></div>
+                                    <div class="chart-dlt">
+                                        <span>Inactive Cards</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth replace-card"></div>
+                                    <div class="chart-dlt">
+                                        <span>Replaced</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth perm-block"></div>
+                                    <div class="chart-dlt">
+                                        <span>Permanent Block</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth temp-block"></div>
+                                    <div class="chart-dlt">
+                                        <span>Temporary Block</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-charts"></div>
+                    <div class="data-dlt-range">
+                        <div class="data-tlt">
+                            <h1>Week Range Customer Data</h1>
+                            <p>Previous Week (sep 01 - sep 07)</p>
+                        </div>
+                        <div class="data-dlt-sec">
+                            <div class="data-dlt-cont">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="data-dlt-cont">
+                                <div class="data-dlt-lst">
+                                    <ul>
+                                        <li class="lst-reg"><span>Total Cards</span><span>300</span></li>
+                                        <li class="lst-active"><span>Allocated Cards</span><span>89</span></li>
+                                        <li class="lst-inactive"><span>Inallocated cards</span><span>89</span></li>
+                                        <li class="lst-kyc"><span>Active</span><span>89</span></li>
+                                        <li class="lst-kyc"><span>Inactive</span><span>89</span></li>
+                                        <li class="lst-region"><span>Replaced</span><span>89</span></li>
+                                    </ul>
+                                </div>
+                                <div class="data-dlt-lst">
+                                    <ul>
+                                        <li class="lst-perm"><span>Permanent Block</span><span>89</span></li>
+                                        <li class="lst-temp"><span>Temporary Block</span><span>89</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenet-sec dash-ove">
+                <div class="content-overview">
+                    <div class="tlt-section-graph">
+                        <h1>Transcorp - Transaction Status | <span class="hsmall">BIN 1 - 234567 / Product Code -
+                                45</span>
+                        </h1>
+                        <div class="icn-sec">
+                            <span><img src="images/upload.svg" alt="" /> </span>
+                            <span><img src="images/mail.svg" alt="" /> </span>
+                        </div>
+                    </div>
+                    <div class="grph-filter">
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>All Network</option>
+                                <option>All Network</option>
+                            </select>
+                        </div>
+                        <div class="drops">
+                            <select class="selectpicker">
+                                <option>Week to Date</option>
+                                <option>Week to Date</option>
+                            </select>
+                        </div>
+                        <div class="grph-filtbtns">
+                            <span class="flts act">Overall</span>
+                            <span class="flts">Failure</span>
+                            <span class="flts">Types</span>
+                            <span class="flts">Merchant</span>
+                        </div>
+                    </div>
+                    <div class="dounut-chrt-sec">
+                        <div class="row">
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth total-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Total Transactions</span>
+                                        <span>1200</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth succ-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Success Transactions</span>
+                                        <span>800</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth fail-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Failure Transactions</span>
+                                        <span>400</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth mer-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Merchant Approved</span>
+                                        <span>750</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth marrej-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Merchant Rejected</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth init-trans"></div>
+                                    <div class="chart-dlt">
+                                        <span>Intiated Transactions</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth region-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Customers by region</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col6">
+                                <div class="dnt-chrt">
+                                    <div class="ct-chart ct-perfect-fourth region-chart"></div>
+                                    <div class="chart-dlt">
+                                        <span>Customers by region</span>
+                                        <span>230</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-charts"></div>
+                    <div class="data-dlt-range">
+                        <div class="data-tlt">
+                            <h1>Week Range Customer Data</h1>
+                            <p>Previous Week (sep 01 - sep 07)</p>
+                        </div>
+                        <div class="data-dlt-sec">
+                            <div class="data-dlt-cont">
+                                <span>&nbsp;</span>
+                            </div>
+                            <div class="data-dlt-cont">
+                                <div class="data-dlt-lst">
+                                    <ul>
+                                        <li class="lst-reg"><span>Total Trans</span><span>300</span></li>
+                                        <li class="lst-active"><span>Success Trans</span><span>89</span></li>
+                                        <li class="lst-inactive"><span>Failure Trans</span><span>89</span></li>
+                                        <li class="lst-kyc"><span>MCC Approved</span><span>89</span></li>
+                                        <li class="lst-region"><span>MCC Rejected</span><span>89</span></li>
+                                        <li class="lst-replace"><span>Intiated Trans</span><span>89</span></li>
+                                    </ul>
+                                </div>
+                                <div class="data-dlt-lst">
+                                    <ul>
+                                        <li class="lst-perm"><span>Reversel</span><span>89</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenet-sec dash-overview">
+                <div class="content-overview">
+                    <div class="dash-transaction">
+                        <div class="dash-cont-tlt" style="width: 100%;">
+                            <h1>Transcorp - Transaction History | <span class="hsmall">BIN 1 - 234567 / Product Code -
+                                    45</span></h1>
+                            <span class="custom-date"> Previous week Data </span>
+                        </div>
+                        <div class="tlt-btn-sec">
+                            <div class="icn-sec">
+                                <span><img src="images/upload.svg" alt=""> </span>
+                                <span><img src="images/mail.svg" alt=""> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="w-full content-table">
+                        <div class="row">
+                            <div class="table-title-sec">
+                                <div class="col-xl-8">
+                                    <div class="tlt-cus-drop">
+                                        <p class="frm-tlt">Transaction Details (1080)</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 d-flex justify-content-end align-items-center">
+                                    <div class="tbl-left-sec">
+                                        <div class="tlt-search-sec">
+                                            <div class="search-bx">
+                                                <input type="text" placeholder="search customer" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- table starts here -->
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <section class="table-sec w-full table-responsive table-responsive-xl">
+                                    <div class="empty-trans-section">
+                                        <div class="emty-trans-bx">
+                                            <img src="images/empty-trans.svg" alt="" class="img-fluid" />
+                                            <p>Select search critera and Date range to view your transaction history</p>
+                                        </div>
+                                    </div>
+                                    <table class="table table-hover table-transaction-history">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Date & Time</th>
+                                                <th scope="col">Corporate Name</th>
+                                                <th scope="col">Customer ID</th>
+                                                <th scope="col">Card Number</th>
+                                                <th scope="col">Amount</th>
+                                                <th scope="col">TransactioN Type</th>
+                                                <th scope="col">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">LOAD</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">USED</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">MCC</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">LOAD</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">USED</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">2020-02-11 13:12:16</td>
+                                                <td scope="row">TCMSWIPE</td>
+                                                <td scope="row">944001234</td>
+                                                <td scope="row">6073XXXXXXXX6285</td>
+                                                <td scope="row">683.49</td>
+                                                <td scope="row">MCC</td>
+                                                <td scope="row">Success</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="tot-sec cnt trans-tbl-cnt">
+                                <div class="col-xl-6">
+                                    <span class="tot-pg-count">Total pages (36)</span>
+                                </div>
+                                <div class="col-xl-6"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--less js file-->
+        <script src="//cdn.jsdelivr.net/npm/less"></script>
+        <script type="text/javascript" src="js/chartjs.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+
+</html>
