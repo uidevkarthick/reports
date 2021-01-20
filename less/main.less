@@ -418,12 +418,92 @@
     margin-right: 15px;
   }
 }
+.emaillst {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.scrl-snd {
+  float: right;
+  width: 100%;
+  cursor: pointer;
+  text-decoration: underline;
+  color: @export_color;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: @font-ilisar_regular;
+  text-align: right;
+  margin-top: 8px;
+
+  &:after {
+    content: "";
+    background: url("../images/down-blue.svg") no-repeat center;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 4px;
+    position: relative;
+    top: 3px;
+  }
+}
+
+.more-dates {
+  float: left;
+  width: 100%;
+  display: none;
+}
+.start-date {
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  input {
+    float: left;
+    width: 46%;
+    height: 36px;
+    font-size: 12px;
+    line-height: 14px;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  input:nth-child(2) {
+    float: right;
+  }
+
+  .bootstrap-select {
+    width: 46% !important;
+    height: 36px !important;
+    button {
+      height: 100% !important;
+    }
+  }
+
+  .selectpicker {
+    float: left;
+    width: 46% !important;
+    height: 36px !important;
+    font-size: 12px;
+    line-height: 14px;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.col6 {
+  max-width: 20%;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+}
 
 @media screen and (min-width: 1350px) and (max-width: 1550px) {
   .col6 {
-    max-width: 20%;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
+    max-width: 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1349px) {
@@ -523,6 +603,16 @@
     line-height: 12px;
     font-family: @font-ilisar_regular;
     color: @theme-color;
+  }
+}
+
+.region-slct {
+  width: 70% !important;
+  left: 15%;
+  position: absolute;
+  top: 2.5%;
+  button {
+    border: none;
   }
 }
 
@@ -1619,7 +1709,7 @@ form .form-control:placeholder {
 
 .dash-ove {
   float: right;
-  width: calc(100% - 250px);
+  width: calc(100% - 16%);
   padding: 18px 20px;
   transition: 0.2s all ease;
   position: relative;
@@ -1867,8 +1957,9 @@ span.custom-date {
     border-radius: 20px;
     float: left;
     width: 100%;
-    padding: 20px 0;
+    padding: 20% 0 10% 0;
     margin-bottom: 30px;
+    position: relative;
 
     .chart-dlt {
       float: left;
@@ -2045,8 +2136,8 @@ span.custom-date {
       line-height: 22px;
       color: @theme-color;
       float: left;
-      width: 100%;
       margin-bottom: 15px;
+      margin-right: 15px;
     }
   }
 

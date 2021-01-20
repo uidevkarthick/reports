@@ -168,7 +168,7 @@
                                 <div class="corp-select">
                                     <div class="agent-drop">
                                         <label>Business</label>
-                                        <select class="selectpicker">
+                                        <select class="selectpicker custom-dropdown">
                                             <option>ybbf</option>
                                             <option>ybbf</option>
                                             <option>ybbf</option>
@@ -178,7 +178,7 @@
                                 <div class="corp-select">
                                     <div class="agent-drop">
                                         <label>Corporate</label>
-                                        <select class="selectpicker">
+                                        <select class="selectpicker custom-dropdown">
                                             <option>DATA</option>
                                             <option>DATA</option>
                                             <option>DATA</option>
@@ -188,7 +188,7 @@
                                 <div class="corp-select">
                                     <div class="agent-drop">
                                         <label>BIN 1</label>
-                                        <select class="selectpicker">
+                                        <select class="selectpicker custom-dropdown">
                                             <option>234567 / Product Code - 45</option>
                                             <option>234567 / Product Code - 45</option>
                                             <option>234567 / Product Code - 45</option>
@@ -207,7 +207,7 @@
                     <div class="row float-left">
                         <div class="col-xl-3 col-sm-4 mb-30">
                             <div class="ove-info">
-                                <span class="ove-img"><img src="images/dashboard/avail-balance.svg" alt=""
+                                <span class="ove-img"><img src="images/dashboard/available-icon.svg" alt=""
                                         class="img-fluid" /></span>
                                 <div class="ove-txt">
                                     <span class="ove-txt-tlt">Available Balance</span>
@@ -295,18 +295,18 @@
                         </h1>
                         <div class="icn-sec">
                             <span><img src="images/upload.svg" alt="" /> </span>
-                            <span><img src="images/mail.svg" alt="" /> </span>
+                            <span class="share-mail"><img src="images/mail.svg" alt="" /> </span>
                         </div>
                     </div>
                     <div class="grph-filter">
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>All Network</option>
                                 <option>All Network</option>
                             </select>
                         </div>
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>Week to Date</option>
                                 <option>Week to Date</option>
                             </select>
@@ -356,6 +356,10 @@
                             </div>
                             <div class="col-xl-2 col6">
                                 <div class="dnt-chrt">
+                                    <select class="selectpicker custom-dropdown region-slct">
+                                        <option>Chennai</option>
+                                        <option>Avadi</option>
+                                    </select>
                                     <div class="ct-chart ct-perfect-fourth region-chart"></div>
                                     <div class="chart-dlt">
                                         <span>Customers by region</span>
@@ -398,18 +402,18 @@
                         </h1>
                         <div class="icn-sec">
                             <span><img src="images/upload.svg" alt="" /> </span>
-                            <span><img src="images/mail.svg" alt="" /> </span>
+                            <span class="share-mail"><img src="images/mail.svg" alt="" /> </span>
                         </div>
                     </div>
                     <div class="grph-filter">
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>All Network</option>
                                 <option>All Network</option>
                             </select>
                         </div>
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>Week to Date</option>
                                 <option>Week to Date</option>
                             </select>
@@ -536,18 +540,18 @@
                         </h1>
                         <div class="icn-sec">
                             <span><img src="images/upload.svg" alt="" /> </span>
-                            <span><img src="images/mail.svg" alt="" /> </span>
+                            <span class="share-mail"><img src="images/mail.svg" alt="" /> </span>
                         </div>
                     </div>
                     <div class="grph-filter">
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>All Network</option>
                                 <option>All Network</option>
                             </select>
                         </div>
                         <div class="drops">
-                            <select class="selectpicker">
+                            <select class="selectpicker custom-dropdown">
                                 <option>Week to Date</option>
                                 <option>Week to Date</option>
                             </select>
@@ -676,8 +680,8 @@
                         </div>
                         <div class="tlt-btn-sec">
                             <div class="icn-sec">
-                                <span><img src="images/upload.svg" alt=""> </span>
-                                <span><img src="images/mail.svg" alt=""> </span>
+                                <span style="margin-right: 15px;"><img src="images/upload.svg" alt=""> </span>
+                                <span class="share-mail"><img src="images/mail.svg" alt=""> </span>
                             </div>
                         </div>
                     </div>
@@ -791,6 +795,41 @@
                             </div>
                         </div>
                     </section>
+                </div>
+            </div>
+            <!-- popup -->
+            <div class="overlay">
+                <div class="popup">
+                    <div class="popup-edit-transq pop-cont">
+                        <div class=" pop-title">Share Customer data</div>
+                        <div class="pop-conten">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group col-xl-12 col-xs-12 col-sm-12">
+                                        <input type="email" class="form-control emaillst" placeholder="" value="" />
+                                        <span class="scrl-snd">Schedule and Send Later</span>
+                                    </div>
+                                    <div class="more-dates">
+                                        <div class="start-date">
+                                            <input type="date" placeholder="startholder" class="form-control" /> -
+                                            <input type="date" placeholder="startholder" class="form-control" />
+                                        </div>
+                                        <div class="start-date">
+                                            <input type="time" placeholder="startholder" class="form-control" /> -
+                                            <select class="selectpicker custom-dropdown">
+                                                <option>Does not repeat</option>
+                                                <option>repeat</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class=" pop-confirm">
+                            <button type="submit" class="cncl-butn-pop">Cancel</button>
+                            <button type="submit" class="submit-butn-pop">Submit</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

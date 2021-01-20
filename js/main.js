@@ -16,6 +16,12 @@ $(document).ready(function () {
     window.location.href = "index.html";
   });
 
+  // more mail info
+
+  $(".scrl-snd").click(function () {
+    $(".more-dates").slideToggle();
+  })
+
 
   setTimeout(function () {
 
@@ -24,11 +30,11 @@ $(document).ready(function () {
       dnuts = $(this).find(".dnt-chrt");
 
       if ($(window).width() < 1600) {
-        toShow = 5;
+        toShow = 4;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       } else {
-        toShow = 6;
+        toShow = 5;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       }
@@ -42,11 +48,11 @@ $(document).ready(function () {
       dnuts = $(this).parent().find(".dounut-chrt-sec").find(".dnt-chrt");
 
       if ($(window).width() < 1600) {
-        toShow = 5;
+        toShow = 4;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       } else {
-        toShow = 6;
+        toShow = 5;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       }
@@ -148,8 +154,8 @@ $(document).ready(function () {
     $(".popup-block").show();
   });
   // edit transaction popup
-
-  $(".edit-trans-queue").click(function () {
+  // popup for share
+  $(".share-mail").click(function () {
     $(".overlay").show();
     $(".pop-cont").hide();
     $(".popup-edit-transq").show();
