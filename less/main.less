@@ -493,11 +493,11 @@
   }
 }
 
-.col6 {
-  max-width: 20%;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
-}
+// .col6 {
+//   max-width: 20%;
+//   -ms-flex: 0 0 20%;
+//   flex: 0 0 20%;
+// }
 
 @media screen and (min-width: 1350px) and (max-width: 1550px) {
   .col6 {
@@ -1713,6 +1713,8 @@ form .form-control:placeholder {
   padding: 18px 20px;
   transition: 0.2s all ease;
   position: relative;
+  background: #ffffff;
+  margin-bottom: 25px;
 
   h1 {
     font-family: @font-ilisar_regular;
@@ -1731,9 +1733,9 @@ form .form-control:placeholder {
   width: 100%;
   background: @white-color;
   border-radius: 6px;
-  border: 0.5px solid rgba(150, 150, 150, 0.2);
+  // border: 0.5px solid rgba(150, 150, 150, 0.2);
   box-sizing: border-box;
-  box-shadow: 0px 2px 30px 1px rgba(109, 109, 109, 0.05);
+  // box-shadow: 0px 2px 30px 1px rgba(109, 109, 109, 0.05);
   border-radius: 12px;
   margin-top: 30px;
 
@@ -1909,6 +1911,9 @@ span.custom-date {
 }
 .ct-label {
   display: none !important;
+}
+.bar-chart .ct-label {
+  display: block !important;
 }
 
 .dshow {

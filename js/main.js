@@ -34,7 +34,7 @@ $(document).ready(function () {
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       } else {
-        toShow = 5;
+        toShow = 6;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       }
@@ -52,7 +52,7 @@ $(document).ready(function () {
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       } else {
-        toShow = 5;
+        toShow = 6;
         dnuts.hide();
         dnuts.slice(0, toShow).show();
       }

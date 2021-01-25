@@ -324,6 +324,15 @@ $(document).ready(function () {
             ],
         });
 
+        // line
+
+        // new Chartist.Bar('.customer-data-bar', {
+        //     labels: ['Registered', 'Active', 'Inactive', 'KYC', 'Cus by region'],
+        //     series: [150, 50, 100, 200, 300]
+        // }, {
+        //     distributeSeries: true
+        // });
+
     }, 200)
 
 })
