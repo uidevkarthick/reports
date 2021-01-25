@@ -499,6 +499,14 @@
 //   flex: 0 0 20%;
 // }
 
+@media screen and (max-width: 600px) {
+  .col6 {
+    max-width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+}
+
 @media screen and (min-width: 1350px) and (max-width: 1550px) {
   .col6 {
     max-width: 25%;
@@ -1716,6 +1724,11 @@ form .form-control:placeholder {
   background: #ffffff;
   margin-bottom: 25px;
 
+  @media screen and (max-width: 600px) {
+    float: left;
+    width: 100%;
+  }
+
   h1 {
     font-family: @font-ilisar_regular;
     font-style: normal;
@@ -1762,15 +1775,28 @@ form .form-control:placeholder {
     width: 100%;
     padding: 15px;
 
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      -ms-flex-direction: column;
+    }
+
     .data-dlt-cont {
       float: left;
       width: 50%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
 
     .data-dlt-lst {
       float: left;
       width: 50%;
       padding: 10px 2.5rem;
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
 
       ul {
         padding: 0;
@@ -1902,11 +1928,25 @@ span.custom-date {
   width: 100%;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
   .drops {
     display: inline-block;
     margin-right: 30px;
     float: left;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-right: 0;
+
+      .bootstrap-select {
+        width: 100% !important;
+        margin-bottom: 15px;
+      }
+    }
   }
 }
 .ct-label {
@@ -2110,6 +2150,9 @@ span.custom-date {
     border: 1px solid @table-td-color;
     padding: 5px 14px;
     margin-right: 15px;
+    @media screen and (max-width: 600px) {
+      margin-bottom: 15px;
+    }
   }
   .flts.act {
     float: left;
