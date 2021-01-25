@@ -28,6 +28,7 @@ $(document).ready(function () {
     var dnuts;
     $(".dounut-chrt-sec").each(function () {
       dnuts = $(this).find(".dnt-chrt");
+      dnuts_more = $(this).parent().find(".more-charts");
 
       if ($(window).width() < 1600) {
         toShow = 4;
